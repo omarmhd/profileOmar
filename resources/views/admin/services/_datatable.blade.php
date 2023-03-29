@@ -19,7 +19,7 @@
 
                 {data: 'DT_RowIndex', 'orderable': true, 'searchable': false },
                 {data: 'name', name: 'name'},
-                {data: 'slug', name: 'slug'},
+
                 {data: 'type', name:'type'},
                 {data: 'created_at', name: 'created_at'},
                 {data: 'updated_at', name: 'updated_at'},

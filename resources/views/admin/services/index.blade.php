@@ -70,7 +70,7 @@
                     <tr class="fw-bolder  bg-secondary text-muted ">
                         <th class="w-10 text-center"  style="width:1%">#</th>
                         <th class="w-10  text-center"  style="width:10%">الإسم الخدمة</th>
-                        <th class="w-10  text-center"  style="width:10%">الإسم اللطيف</th>
+
                         <th class="w-10  text-center"  style="width:10%">نوع  الخدمة</th>
 
                         <th class="w-10  text-center" style="width:15%">تاريخ الإضافة</th>
