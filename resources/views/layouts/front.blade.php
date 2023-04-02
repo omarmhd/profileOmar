@@ -87,7 +87,7 @@
                     <a class="nav-link" href="{{route("front.achievements")}}">الإنجازات والشهادات</a>
                 </li>
             </ul>
-            <a href="{{$settings['cv']}}" class="btn cs-btn">سيرتي الذاتية</a>
+            <a href="{{asset('images')}}/{{$settings['cv']}}" class="btn cs-btn">سيرتي الذاتية</a>
             <button type="button" class="navbar-toggler btn d-lg-none d-inline-block" id="openMenu">
                 <i class="fas fa-bars"></i>
             </button>
