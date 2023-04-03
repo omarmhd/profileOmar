@@ -24,6 +24,14 @@ class StaticController extends Controller
          DB::table("sys_statics")->where("key","logo")->update(["value"=>$logo]);
 
      }
+     if($request->cv){
+
+
+         $cv=$uploadService->upload($request->cv,'images');
+
+         DB::table("sys_statics")->where("key","cv")->update(["value"=>$cv]);
+
+     }
      if($request->image1){
 
          $image1=$uploadService->upload($request->image1,'images');
