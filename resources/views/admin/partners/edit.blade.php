@@ -54,7 +54,7 @@
     <!--end::Form Widget 13-->
 @endsection
 @push('js')
-    @include("parts.sweetCreate", ['route' => route('admin.partners.update',['id' => $partner>id]),'method'=>'put','redirect'=>route("admin.partners.index")])
+    @include("parts.sweetCreate", ['route' => route('admin.partners.update',['id' => $partner->id]),'method'=>'put','redirect'=>route("admin.partners.index")])
 
 @endpush
 
