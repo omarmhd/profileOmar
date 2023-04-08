@@ -40,11 +40,7 @@ class LoginController extends Controller
     protected function redirectPath()
     {
 
-        if (auth()->user()->role == 'employee') {
-
-            return "".route("showMyEvaluation")."";
-        }
-        return  "".route('dashboard')."";
+        return  "".route('admin.dashboard')."";
     }
     public function username()
     {
