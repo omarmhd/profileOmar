@@ -21,7 +21,7 @@ use App\Http\Controllers\EmployeeController;
 
 
 
-route::group(['prefix'=>'admin','as'=>'admin.' ],function (){
+route::group(['prefix'=>'admin','as'=>'admin.','middleware'=>'auth' ],function (){
 
     Route::get("/" ,function (){
 
