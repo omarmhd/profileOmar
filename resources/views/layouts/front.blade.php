@@ -103,7 +103,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-4 col-md-3">
                     <figure>
-                        <img src="assets/images/footer-logo.svg" alt="" srcset="">
+                        <img src="{{asset("images/".$settings['logo'])}}" alt="" srcset="">
                     </figure>
                 </div>
                 <div class="col-lg-2 col-md-3 col-6">
@@ -119,7 +119,7 @@
 
                         <h4>سعيد بتواصلكم معي على:</h4>
                         <div class="d-flex justify-content-center flex-wrap align-items-center gap-1">
-                            <a href="{{config('settings.whatsapp')}}" target="_blank" rel="noopener noreferrer">
+                            <a href="{{$settings['whatsapp']}}" target="_blank" rel="noopener noreferrer">
                                 <svg id="_whatsapp" data-name=" whatsapp" xmlns="http://www.w3.org/2000/svg" width="24"
                                      height="24" viewBox="0 0 24 24">
                                     <g id="whatsapp">
@@ -133,14 +133,14 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="{{config('settings.whatsapp')}}" target="_blank" rel="noopener noreferrer">
+                            <a href="{{$settings['twiter']}}" target="_blank" rel="noopener noreferrer">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
                                     <path id="Subtraction_1" data-name="Subtraction 1"
                                           d="M10-1206a10.011,10.011,0,0,1-10-10,10.011,10.011,0,0,1,10-10,10.011,10.011,0,0,1,10,10A10.011,10.011,0,0,1,10-1206Zm-5.8-6.058a.18.18,0,0,0-.2.13.285.285,0,0,0,.164.3,9.544,9.544,0,0,0,3.886.852,7.167,7.167,0,0,0,7.447-7.03c0-.053,0-.161,0-.273v-.012a.1.1,0,0,1,0-.017.113.113,0,0,0,0-.018.156.156,0,0,0,0-.025.156.156,0,0,1,0-.025c0-.087,0-.168-.005-.211a7.433,7.433,0,0,0,1.244-1.1.164.164,0,0,0,.032-.172.106.106,0,0,0-.1-.062.147.147,0,0,0-.049.009l-.175.062-.026.009a6.231,6.231,0,0,1-1.122.328,4.656,4.656,0,0,0,1.444-1.412.191.191,0,0,0,.02-.2.145.145,0,0,0-.13-.077.2.2,0,0,0-.084.02c-.1.048-.218.1-.341.164a8.441,8.441,0,0,1-1.511.631l-.024.007-.025.007a2.858,2.858,0,0,0-2.019-.83,2.879,2.879,0,0,0-2.875,2.875c0,.026,0,.058,0,.093,0,.08,0,.17,0,.227a5.93,5.93,0,0,1-4.682-2.452.236.236,0,0,0-.176-.1.182.182,0,0,0-.168.145,5.608,5.608,0,0,0-.1,1.151,2.839,2.839,0,0,0,1.789,2.319,2.607,2.607,0,0,1-.652.089,1.9,1.9,0,0,1-.856-.214.233.233,0,0,0-.105-.025.159.159,0,0,0-.129.055.217.217,0,0,0-.02.19,3.172,3.172,0,0,0,2.495,1.972,1.653,1.653,0,0,1-.726.115h-.26c-.088,0-.392-.02-.585-.044a.612.612,0,0,0-.073,0c-.065,0-.18.012-.222.089s-.011.161.072.287A3.313,3.313,0,0,0,7.921-1213a6.479,6.479,0,0,1-3.711.946H4.2Z"
                                           transform="translate(0 1226)" fill="#dceefb" />
                                 </svg>
                             </a>
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="{{$settings['snap']}}" target="_blank" rel="noopener noreferrer">
                                 <svg id="_snapchat" data-name=" snapchat" xmlns="http://www.w3.org/2000/svg" width="24"
                                      height="24" viewBox="0 0 24 24">
                                     <g id="snapchat">
@@ -154,7 +154,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="{{$settings['facebook']}}" target="_blank" rel="noopener noreferrer">
                                 <svg id="_facebook" data-name=" facebook" xmlns="http://www.w3.org/2000/svg" width="24"
                                      height="24" viewBox="0 0 24 24">
                                     <g id="facebook">
@@ -168,7 +168,7 @@
                                     </g>
                                 </svg>
                             </a>
-                            <a href="http://" target="_blank" rel="noopener noreferrer">
+                            <a href="{{$settings['youtube']}}" target="_blank" rel="noopener noreferrer">
                                 <svg id="_youtube" data-name=" youtube" xmlns="http://www.w3.org/2000/svg" width="24"
                                      height="24" viewBox="0 0 24 24">
                                     <g id="youtube">
