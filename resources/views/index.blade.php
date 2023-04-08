@@ -11,7 +11,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <figure>
-                            <img src="assets/images/banner-img.png" class="img-fluid wow zoomIn" data-wow-duration="1s"
+                            <img src="{{asset("images/".$hero_img)}}" class="img-fluid wow zoomIn" data-wow-duration="1s"
                                 data-wow-delay="0.1s" alt="" srcset="">
                         </figure>
                     </div>
@@ -80,27 +80,48 @@
     <!-- ./about-section -->
 
     <!-- companies-section -->
-    <div class="companies-section">
+    <div class="partners-section">
         <div class="container">
             <div class="content">
                 <div class="main-title">
-                    <h2 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">الشركات المعتمدة للمهندس عمر
-                    </h2>
+                    <h2 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">الشركات المعتمدة للمهندس عمر</h2>
                 </div>
-                <div class="d-flex align-items-center justify-content-between mt-4 flex-wrap">
+                <div class="partners-slider owl-carousel owl-slider mt-4">
 
                     @foreach($companies as $company)
-
-                    <figure class="scale-hover">
-                        <img src="{{asset("images")}}/{{$company->value}}" alt="" class=" wow zoomIn" data-wow-duration="1s"
-                            data-wow-delay="0.1s" srcset="">
-                    </figure>
+                        <div class="partenr-card wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                            <figure>
+                                <img src="{{asset("images")}}/{{$company->image}}" alt="" srcset="">
+                            </figure>
+                            <h6>{{$company->title}}</h6>
+                        </div>
                     @endforeach
 
                 </div>
             </div>
         </div>
     </div>
+{{--    <div class="companies-section">--}}
+{{--        <div class="container">--}}
+{{--            <div class="content">--}}
+{{--                <div class="main-title">--}}
+{{--                    <h2 class="wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.1s">الشركات المعتمدة للمهندس عمر--}}
+{{--                    </h2>--}}
+{{--                </div>--}}
+{{--                <div class="d-flex align-items-center justify-content-between mt-4 flex-wrap">--}}
+
+{{--                    @foreach($companies as $company)--}}
+
+{{--                    <figure class="scale-hover">--}}
+{{--                        <img src="{{asset("images")}}/{{$company->value}}" alt="" class=" wow zoomIn" data-wow-duration="1s"--}}
+{{--                            data-wow-delay="0.1s" srcset="">--}}
+{{--                    </figure>--}}
+{{--                    @endforeach--}}
+
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--    </div>--}}
     <!-- ./companies-section -->
 
     <!-- clients-section -->

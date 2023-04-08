@@ -101,8 +101,12 @@
                         <!--end::Label-->
                         <!--begin::Col-->
                         <div class="col-lg-4 fv-row fv-plugins-icon-container">
+                            <a href="{{route("admin.statics.edit")}}"> <i class="fa fa-reply"></i>تحديث </a>
                             <input type="file" name="cv" class="form-control form-control-lg form-control-solid" >
-                            <div class="fv-plugins-message-container invalid-feedback"></div></div>
+                            <div class="form-text cv"><a href="{{asset("images")}}/{{$settings['cv']}}">{{$settings['cv']}}</a>
+
+                            </div></div>
+
                         <!--end::Col-->
                     </div>
 
@@ -215,6 +219,44 @@
                     </div>
                     <hr>
                     <h3>الصفحة الرئيسية </h3>
+                    <div class="row mb-6">
+                        <!--begin::Label-->
+                        <label class="col-lg-4 col-form-label fw-bold fs-6">صورة الهيرو</label>
+                        <!--end::Label-->
+                        <!--begin::Col-->
+                        <div class="col-lg-8">
+                            <!--begin::Image input-->
+                            <div class="image-input image-input-outline" data-kt-image-input="true" style="background-image: url(assets/media/avatars/blank.png)">
+                                <!--begin::Preview existing avatar-->
+                                <div class="image-input-wrapper w-125px h-125px" style="background: url({{asset("images")}}/{{$settings["hero_img"]}}) no-repeat content-box; background-position: center;"></div>
+                                <!--end::Preview existing avatar-->
+                                <!--begin::Label-->
+                                <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-white shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="" data-bs-original-title="تعديل الصور ">
+                                    <i class="bi bi-pencil-fill fs-7"></i>
+                                    <!--begin::Inputs-->
+                                    <input type="file" name="hero_img" accept=".png, .jpg, .jpeg">
+                                    <input type="hidden" name="avatar_remove">
+                                    <!--end::Inputs-->
+                                </label>
+                                <!--end::Label-->
+                                <!--begin::Cancel-->
+                                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-white shadow" data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="" data-bs-original-title="Cancel avatar">
+																<i class="bi bi-x fs-2"></i>
+															</span>
+                                <!--end::Cancel-->
+                                <!--begin::Remove-->
+                                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-white shadow" data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="" data-bs-original-title="Remove avatar">
+																<i class="bi bi-x fs-2"></i>
+															</span>
+                                <!--end::Remove-->
+                            </div>
+                            <!--end::Image input-->
+                            <!--begin::Hint-->
+                            <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+                            <!--end::Hint-->
+                        </div>
+                        <!--end::Col-->
+                    </div>
 
                     <div class="row mb-6">
                         <!--begin::Label-->
@@ -402,6 +444,6 @@
     <!--end::Form Widget 13-->
 @endsection
 @push('js')
-    @include("parts.sweetCreate", ['route' => route('admin.statics.update'),'method'=>'post','redirect'=>route("admin.typeService.index")])
+    @include("parts.sweetCreate", ['route' => route('admin.statics.update'),'method'=>'put','redirect'=>''])
 
 @endpush

@@ -25,8 +25,9 @@ class ServiceController extends Controller
                 ->addColumn("type",function ($data){
                     return $data->type->name;
                 })
+
                 ->addColumn('action', function ($data) {
-                    $actionBtn = '<a href="' . route('admin.services.edit', [$data]) . '" class="edit btn btn-primary btn-sm">تعديل</a> <a href="javascript:void(0)" data-id="' . $data->id . '"   class="delete btn btn-sm btn-danger">حذف</a>';
+                    $actionBtn = '<a href="' . route('admin.services.edit', [$data]) . '" class="edit btn btn-icon btn-light-primary me-2 mb-2 py-3"><i class="fa fa-pen"></i></a><a href="javascript:void(0)" data-id="' . $data->id . '"   class="delete btn btn-icon btn-light-danger me-2 mb-2 py-3"><i class="fa fa-trash"></i></a>';
                     return $actionBtn;
                 })->rawColumns(['type','action'])->make(true);
         }

@@ -11,7 +11,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-5">
                     <figure>
-                        <img src="{{asset("images/".$expert->image)}}" class="img-fluid" alt="" srcset="">
+                        <img src="{{asset("images/".$expert->image)}}" class="img-fluid w-100" alt="" srcset="">
                     </figure>
                 </div>
                 <div class="col-lg-7">

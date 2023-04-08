@@ -60,8 +60,9 @@
                         @if($method!=="put")
                         $(this)[0].reset();
                         @endif
-                        if ($redirect){
-                            window.location.href = "{{$redirect}}";}
+                        @if ($redirect)
+                        window.location.href = "{{$redirect}}";
+                        @endif
 
                     }
 

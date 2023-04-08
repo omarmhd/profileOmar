@@ -130,7 +130,7 @@
 
             <div class="text-center mt-20 ms-20 mb-20">
 
-                    <a href="{{route("admin.contacts.index")}}" class="btn btn-secondary"> <i class="fa fa-"></i>عودة</a>
+                    <a href="{{route("admin.contact.index")}}" class="btn btn-secondary"> <i class="fa fa-"></i>عودة</a>
 
                 <!--end::Actions-->
             </form>
@@ -141,7 +141,6 @@
     <!--end::Form Widget 13-->
 @endsection
 @push('js')
-    @include("parts.sweetCreate", ['route' => route('admin.users.update',['user' => $user]),'method'=>'put'])
 
 @endpush
 

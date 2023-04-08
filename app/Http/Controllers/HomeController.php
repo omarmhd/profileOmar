@@ -30,9 +30,6 @@ class HomeController extends Controller
 
     public function setLayoutData()
     {
-
-//
-//
 //        DB::table("sys_statics")->where("key","tweiter")->update(["value"=>$request->twiter]);
 //        DB::table("sys_statics")->where("key","snap")->update(["value"=>$request->snap]);
 //        DB::table("sys_statics")->where("key","youtube")->update(["value"=>$request->youtube]);
@@ -45,12 +42,14 @@ class HomeController extends Controller
     }
     public function index()
     {
+
         $partners=Slider::where("type","partners")->get();
         $reviews=Slider::where("type","reviews")->get();
         $about_us=DB::table("sys_statics")->where("key","about_us")->value("value");
-        $companies=DB::table("sys_statics")->where("section","section4")->get();
+        $hero_img =DB::table("sys_statics")->where("key","hero_img")->value("value");
+        $companies=Slider::where("type","companies")->get();
 
-        return view('index',compact("partners","reviews","about_us","companies"));
+        return view('index',compact("partners","reviews","about_us","companies",'hero_img'));
 
     }
 
@@ -65,7 +64,7 @@ class HomeController extends Controller
     }
     public function experts(){
 
-        $experts=Expert::all();
+        $experts=Expert::paginate(1);
 
         return view("experts",compact('experts'));
 
@@ -87,7 +86,7 @@ class HomeController extends Controller
 
     }
     public function achievements(){
-        $achievements=Achievement::all();
+        $achievements=Achievement::paginate(1);;
         return view("achievements",compact('achievements'));
 
 

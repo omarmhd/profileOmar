@@ -58,10 +58,17 @@ class StaticController extends Controller
          $image5=$uploadService->upload($request->image5,'images');
          DB::table("sys_statics")->where("key","image5")->update(["value"=>$image5]);
      }
+     if($request->hero_img){
+
+         $hero_img=$uploadService->upload($request->hero_img,'images');
+         DB::table("sys_statics")->where("key","hero_img")->update(["value"=>$hero_img]);
+     }
+
+
 
     /**/
      DB::table("sys_statics")->where("key","facebook")->update(["value"=>$request->facebook]);
-     DB::table("sys_statics")->where("key","tweiter")->update(["value"=>$request->twiter]);
+     DB::table("sys_statics")->where("key","twiter")->update(["value"=>$request->twiter]);
      DB::table("sys_statics")->where("key","snap")->update(["value"=>$request->snap]);
      DB::table("sys_statics")->where("key","youtube")->update(["value"=>$request->youtube]);
      DB::table("sys_statics")->where("key","whatsapp")->update(["value"=>$request->whatsapp]);
@@ -73,7 +80,7 @@ class StaticController extends Controller
 
  }
 
- public function editUser(){
+ public function editUser (){
 
      $user=User::find(1);
      return view('admin.statics.editUser',compact('user'));

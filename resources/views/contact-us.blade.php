@@ -4,7 +4,7 @@
 @section("content")
 <main class="main-body contact-us">
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" style="margin-top: 90px"    >
             <div class="col-xl-5 col-lg-6  col-md-8">
                 <form class="form" action="{{route('front.contact.store')}}" method="post">
                     @csrf
@@ -23,8 +23,8 @@
                     @endif
                     <form action="" method="get">
                         <div class="form-group">
-                            <label for="">اسم العميل</label>
-                            <input type="text" name="name" class="form-control cs-input" placeholder="اسم العميل">
+                            <label for="">اسم جهة التواصل </label>
+                            <input type="text" name="name" class="form-control cs-input" placeholder=" ">
                         </div>
                         <div class="form-group">
                             <label for="">رقم الهاتف</label>
@@ -32,7 +32,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">الإيميل</label>
-                            <input type="email" name="email" class="form-control cs-input" placeholder="hs420hassan@gmail.com" dir="ltr">
+                            <input type="email" name="email" class="form-control cs-input" placeholder="" dir="ltr">
                         </div>
                         <div class="form-group">
                             <label for="">العنوان</label>

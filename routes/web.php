@@ -52,6 +52,15 @@ route::group(['prefix'=>'admin','as'=>'admin.' ],function (){
     Route::get("/partners/{id}/edit",[\App\Http\Controllers\Admin\PartnerController::class,'edit'])->name('partners.edit');
     Route::put("/partners/{id}",[\App\Http\Controllers\Admin\PartnerController::class,'update'])->name('partners.update');
     Route::delete("/partners/{id}",[\App\Http\Controllers\Admin\PartnerController::class,'destroy'])->name('partners.destroy');
+    /*companies*/
+
+    Route::get("/companies",[\App\Http\Controllers\Admin\CompanyController::class,'index'])->name('companies.index');
+    Route::get("/companies/create",[\App\Http\Controllers\Admin\CompanyController::class,'create'])->name('companies.create');
+    Route::post("/companies",[\App\Http\Controllers\Admin\CompanyController::class,'store'])->name('companies.store');
+    Route::get("/companies/{id}/edit",[\App\Http\Controllers\Admin\CompanyController::class,'edit'])->name('companies.edit');
+    Route::put("/companies/{id}",[\App\Http\Controllers\Admin\CompanyController::class,'update'])->name('companies.update');
+    Route::delete("/companies/{id}",[\App\Http\Controllers\Admin\CompanyController::class,'destroy'])->name('companies.destroy');
+
     /*STATICS*/
     Route::get("/statics",[\App\Http\Controllers\Admin\StaticController::class,'edit'])->name('statics.edit');
     Route::put("/statics/update",[\App\Http\Controllers\Admin\StaticController::class,'update'])->name('statics.update');

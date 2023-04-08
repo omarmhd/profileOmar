@@ -27,7 +27,7 @@
         <div class="card-header border-0 pt-6">
             <!--begin::Card title-->
             <div class="card-title">
-                جدول الشركاء
+                جدول الشركات
 
 
             </div>
@@ -37,7 +37,7 @@
                 <!--begin::Toolbar-->
                 <div class="d-flex justify-content-end" data-table-toolbar="base">
 
-                    <a href="{{route('admin.partners.create')}}" class="btn btn-success "> إضافة شريك <i class="fa fa-plus"></i></a>
+                    <a href="{{route('admin.companies.create')}}" class="btn btn-success "> إضافة شركة <i class="fa fa-plus"></i></a>
 
 
                 </div>
@@ -70,7 +70,7 @@
                     <tr class="fw-bolder  bg-secondary text-muted ">
 
                         <th class="w-10 text-center"  style="width:1%">#</th>
-                        <th class="w-10  text-center"  style="width:10%">العنوان/اسم</th>
+                        <th class="w-10  text-center"  style="width:10%">اسم</th>
 
 
                         <th class="w-10  text-center"  style="width:10%">الترتيب</th>
@@ -101,6 +101,6 @@
 @push('js')
     <script src="{{asset('assets/js/jquery.dataTables.min.js')}}"></script>
 
-    @include('admin.partners._datatable')
-    @include("parts.sweetDelete", ['route' => route('admin.partners.destroy', ['id' => ':id'])])
+    @include('admin.companies._datatable')
+    @include("parts.sweetDelete", ['route' => route('admin.companies.destroy', ['id' => ':id'])])
 @endpush

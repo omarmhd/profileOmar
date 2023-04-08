@@ -22,7 +22,7 @@
                 <!--end::Title-->
                 <!--begin::Description-->
                 <div class="text-gray-400 fw-bold fs-5">
-                    <a href="{{route('admin.partners.index')}}" class="fw-bolder link-primary">جميع الشركاء </a>.
+                    <a href="{{route('admin.companies.index')}}" class="fw-bolder link-primary">جميع الشركاء </a>.
                 </div>
                 <!--end::Description-->
             </div>
@@ -32,7 +32,7 @@
             @csrf
             <!--begin::Input group-->
 
-                @include('admin.partners._fields')
+                @include('admin.companies._fields')
 
 
                 <div class="text-center mt-20 ms-20 mb-20">
@@ -53,7 +53,7 @@
     <!--end::Form Widget 13-->
 @endsection
 @push('js')
-    @include("parts.sweetCreate", ['route' => route('admin.partners.store'),'method'=>'post','redirect'=>route("admin.partners.index")])
+    @include("parts.sweetCreate", ['route' => route('admin.companies.store'),'method'=>'post','redirect'=>route("admin.companies.index")])
 
 
 @endpush

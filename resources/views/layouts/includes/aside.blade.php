@@ -145,6 +145,17 @@
                             </a>
 
                         </div>
+
+                        <div class="menu-item">
+                            <a class="menu-link" href="{{route("admin.companies.index")}}">
+												<span class="menu-bullet">
+													<span class="bullet bullet-dot"></span>
+												</span>
+                                <span class="menu-title">الشركات</span>
+
+                            </a>
+
+                        </div>
                         <div class="menu-item">
                             <a class="menu-link" href="{{route("admin.partners.index")}}">
 												<span class="menu-bullet">

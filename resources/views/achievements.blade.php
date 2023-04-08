@@ -32,32 +32,33 @@
 
             </div>
             <div class="row justify-content-end">
-                <div class="col-2">
-                    <div class="pagination">
-                        <a href="#">
-                            <div class="arrow-right">
-                                <svg id="arrow-right" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
-                                    <path id="Vector" d="M0,15.881,6.487,9.344a2,2,0,0,0,0-2.807L0,0" transform="translate(8.929 4.059)" fill="none" stroke="#0a558c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                                    <path id="Vector-2" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(24 24) rotate(180)" fill="none" opacity="0"/>
-                                  </svg>
-                            </div>
-                        </a>
-                        <div>
-                            <span>1</span>
-                            <span>من</span>
-                            <span>10</span>
-                        </div>
-                        <a href="#">
-                            <div class="arrow-left">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
-                                    <g id="arrow-right" transform="translate(24 24) rotate(180)">
-                                      <path id="Vector" d="M0,15.881,6.487,9.344a2,2,0,0,0,0-2.807L0,0" transform="translate(8.929 4.059)" fill="none" stroke="#0a558c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-                                      <path id="Vector-2" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(24 24) rotate(180)" fill="none" opacity="0"/>
-                                    </g>
-                                  </svg>
-                            </div>
-                        </a>
-                    </div>
+                <div class="col-12">
+                    {{ $achievements->links() }}
+{{--                    <div class="pagination">--}}
+{{--                        <a href="#">--}}
+{{--                            <div class="arrow-right">--}}
+{{--                                <svg id="arrow-right" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">--}}
+{{--                                    <path id="Vector" d="M0,15.881,6.487,9.344a2,2,0,0,0,0-2.807L0,0" transform="translate(8.929 4.059)" fill="none" stroke="#0a558c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>--}}
+{{--                                    <path id="Vector-2" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(24 24) rotate(180)" fill="none" opacity="0"/>--}}
+{{--                                  </svg>--}}
+{{--                            </div>--}}
+{{--                        </a>--}}
+{{--                        <div>--}}
+{{--                            <span>1</span>--}}
+{{--                            <span>من</span>--}}
+{{--                            <span>10</span>--}}
+{{--                        </div>--}}
+{{--                        <a href="#">--}}
+{{--                            <div class="arrow-left">--}}
+{{--                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">--}}
+{{--                                    <g id="arrow-right" transform="translate(24 24) rotate(180)">--}}
+{{--                                      <path id="Vector" d="M0,15.881,6.487,9.344a2,2,0,0,0,0-2.807L0,0" transform="translate(8.929 4.059)" fill="none" stroke="#0a558c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>--}}
+{{--                                      <path id="Vector-2" data-name="Vector" d="M0,0H24V24H0Z" transform="translate(24 24) rotate(180)" fill="none" opacity="0"/>--}}
+{{--                                    </g>--}}
+{{--                                  </svg>--}}
+{{--                            </div>--}}
+{{--                        </a>--}}
+{{--                    </div>--}}
                 </div>
             </div>
         </div>
