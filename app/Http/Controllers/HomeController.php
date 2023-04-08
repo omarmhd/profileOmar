@@ -64,7 +64,7 @@ class HomeController extends Controller
     }
     public function experts(){
 
-        $experts=Expert::paginate(1);
+        $experts=Expert::paginate(10);
 
         return view("experts",compact('experts'));
 
@@ -86,7 +86,7 @@ class HomeController extends Controller
 
     }
     public function achievements(){
-        $achievements=Achievement::paginate(1);;
+        $achievements=Achievement::paginate(10);;
         return view("achievements",compact('achievements'));
 
 
